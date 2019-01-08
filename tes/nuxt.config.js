@@ -11,12 +11,25 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    modules: [
+    '@nuxtjs/apollo',
+  ]
   },
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'https://graphql.datocms.com',
+        getAuth: () => 'Bearer fa8933da9e6d9015d6cbbec2556588'
+      },
+    }
+  },
+
   /*
   ** Build configuration
   */
